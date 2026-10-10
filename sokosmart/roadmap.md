@@ -1,0 +1,5 @@
+- [x] Add the existing full-name and banner logos as project assets.
+- [x] Create the minimal SokoSmart landing page using the brand palette.
+- [x] Verify the page, logo display, and navigation.
+- [x] Review the landing page on mobile and desktop and correct layout or logo issues.
+- [x] Verify corrected layouts, original logo proportions, and mobile navigation.
