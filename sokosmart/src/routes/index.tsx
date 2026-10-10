@@ -2,8 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDown, ArrowUpRight, Leaf, Sparkles, ShoppingBag, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import bannerLogo from "@/assets/sokosmart-banner-logo.png.asset.json";
-import fullLogo from "@/assets/sokosmart-full-name-logo.png.asset.json";
+import bannerLogo from "@/../public/banner-logo.png";
+import fullLogo from "@/../public/full-logo.png";
 import marketImage from "@/assets/sokosmart-market.jpg";
 
 export const Route = createFileRoute("/")({
@@ -29,7 +29,7 @@ function Index() {
     <div className="landing" id="top">
       <header className="site-header">
         <div className="page-width header-inner">
-          <a href="#top" aria-label="SokoSmart home" className="header-logo"><img src={bannerLogo.url} alt="SokoSmart" width={1422} height={473} /></a>
+          <a href="#top" aria-label="SokoSmart home" className="header-logo"><img src={bannerLogo} alt="SokoSmart" width={1422} height={473} /></a>
           <nav className="desktop-nav" aria-label="Main navigation">
             <a href="#story">Our story</a><a href="#values">What matters</a>
           </nav>
@@ -60,9 +60,9 @@ function Index() {
         <section className="values-section page-width" id="values" aria-label="What matters to SokoSmart">
           {values.map(({ number, icon: Icon, title, text, className }) => <article key={number} className="value-item"><div className="value-top"><span className={`value-icon ${className}`}><Icon size={24} strokeWidth={1.5} /></span><span className="value-number">{number}</span></div><h3>{title}</h3><p>{text}</p></article>)}
         </section>
-        <section className="growing-section" id="growing" aria-labelledby="growing-title"><div className="page-width growing-inner"><div><span className="eyebrow">A LITTLE FRESHNESS. A LOT OF POSSIBILITY.</span><h2 id="growing-title">Good things<br />are <span>growing.</span></h2><p>A new chapter for the everyday. This is SokoSmart.</p><Button asChild variant="outline" className="back-top"><a href="#top">Back to the beginning <ArrowUpRight /></a></Button></div><img src={fullLogo.url} alt="SokoSmart watermelon shopping bag logo" width={2001} height={1480} loading="lazy" /></div></section>
+        <section className="growing-section" id="growing" aria-labelledby="growing-title"><div className="page-width growing-inner"><div><span className="eyebrow">A LITTLE FRESHNESS. A LOT OF POSSIBILITY.</span><h2 id="growing-title">Good things<br />are <span>growing.</span></h2><p>A new chapter for the everyday. This is SokoSmart.</p><Button asChild variant="outline" className="back-top"><a href="#top">Back to the beginning <ArrowUpRight /></a></Button></div><img src={fullLogo} alt="SokoSmart watermelon shopping bag logo" width={2001} height={1480} loading="lazy" /></div></section>
       </main>
-      <footer className="site-footer page-width"><a href="#top" aria-label="SokoSmart home"><img src={bannerLogo.url} alt="SokoSmart" width={1422} height={473} loading="lazy" /></a><p>Fresh by nature. Smart by choice.</p><span>© 2026 SokoSmart</span></footer>
+      <footer className="site-footer page-width"><a href="#top" aria-label="SokoSmart home"><img src={bannerLogo} alt="SokoSmart" width={1422} height={473} loading="lazy" /></a><p>Fresh by nature. Smart by choice.</p><span>© 2026 SokoSmart</span></footer>
     </div>
   );
 }
